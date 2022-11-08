@@ -17,6 +17,6 @@ def get_numerator(num_one, num_two):
     return a.numerator 
 
 print(rounding_floats(3.144542524, 2))
-print(float_to_fraction(8.54))
+print(float_to_fraction(3.33))
 print(get_denominator(4, 3))
 print(get_numerator(2, 3))
