@@ -9,3 +9,9 @@ print(res)
 res_one = phrase.count("Buffy")
 
 print(res_one)
+
+# Replace Method
+
+res_two = phrase.replace("Buffy", "who", 2)
+
+print(res_two)
