@@ -12,3 +12,7 @@ def find_fib_iter(n):
         a, b = b, a + b
     return a
 
+def find_fib_rec(n):
+    if n < 2:
+        return n 
+    return find_fib_rec(n - 1) + find_fib_rec(n - 2)
