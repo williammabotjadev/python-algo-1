@@ -12,6 +12,7 @@ def generate_primes(n=3):
         p = 2 * p + 1
         if finding_prime_sqrt(p):
             return p 
+            
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print("Usage: generate_primes.py number")
