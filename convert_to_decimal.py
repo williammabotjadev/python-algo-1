@@ -10,4 +10,10 @@ def convert_to_decimal(num, base):
         num = num // 10
     return res 
 
+def test():
+    number, base = 1001, 2
+    assert(convert_to_decimal(number, base) == 9)
+    print("Test Passed!")
 
+if __name__ == "__main__":
+    test()
