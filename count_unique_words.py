@@ -3,7 +3,7 @@
 import string 
 import sys 
 
-def count_unique_words(phrase):
+def count_unique_words():
     words = {}
 
     strip = string.whitespace + string.punctuation + string.digits + "\"'"
@@ -17,3 +17,6 @@ def count_unique_words(phrase):
                         words[word] = words.get(word, 0) + 1 
     for word in sorted(words):
         print(f"{word} occurs {words[word]} times.")
+
+if __name__ == "__main__":
+    count_unique_words()
