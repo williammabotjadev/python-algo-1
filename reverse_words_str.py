@@ -11,4 +11,21 @@ def reverser(s, p_one=0, p_two=None):
         p_one += 1
         p_two -= 1 
 
+def reversing_words_logic(s):
+    reverser(s)
+
+    p = 0
+    start = 0 
+    final = []
+
+    while p < len(s):
+        if s[p] == u"\u0200":
+            reverser(s, start, p - 1)
+            start = p + 1 
+        p += 1 
+    reverser(s, start, p - 1)
     
+    return "".join(s)
+
+if __name__ == "__main__":
+    pass 
