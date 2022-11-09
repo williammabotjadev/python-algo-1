@@ -9,3 +9,8 @@ print(captcha.casefold() == user_input.casefold())
 jumbled_case = "The Brown Quick Fox Jumped over the Lazy Dog"
 
 print(jumbled_case.swapcase())
+
+print(captcha.lower() == user_input.lower())
+
+print(captcha.upper() == user_input.upper())
+
