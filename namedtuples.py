@@ -3,6 +3,6 @@ from collections import namedtuple
 
 MonsterTuple = namedtuple("Monsters", "name age power")
 
-MonsterTuple = ("Vampire", 35, "immortal")
+example_tuple = MonsterTuple("Vampire", 35, "immortal")
 
-print(MonsterTuple)
+print(example_tuple)
