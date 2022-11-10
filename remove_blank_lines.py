@@ -31,3 +31,14 @@ def write_data(file):
         if fh is not None:
             fh.close()
 
+def test():
+    if len(sys.argv) < 2:
+        print("Usage: noblank.py infile1 [infile2...]")
+    
+    for filename in sys.argv[1:]:
+        lines = read_data(filename)
+        if lines: 
+            write_data(lines, filename)
+
+if __name__ == "__main__":
+    test()
