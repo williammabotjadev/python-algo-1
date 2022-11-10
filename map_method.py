@@ -13,7 +13,6 @@ for i in range(2000, 2022):
 
 seq = range(8)
 
-res_two = map(square, map(cube, seq))
+res_two = map(None, seq, map(cube, seq))
 
-for j in range(8):
-    print(res_two.__next__())
+print(res_two)
