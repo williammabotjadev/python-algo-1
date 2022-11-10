@@ -19,4 +19,8 @@ class Shape(Object):
     def __str__(self):
         return f"({self.x}, {self.y})"
 
-    
+class Circle(Shape):
+    def __init__(self, radius, x = 0, y = 0):
+        super().__init__(x, y)
+        self.radius = radius 
+        
