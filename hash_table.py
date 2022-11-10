@@ -23,9 +23,25 @@ class HTLinkedList(object):
         index = self._find(item)
         self.slots[index].delete_node(index)
 
-    
+    def _print(self):
+        for i in range(self.size):
+            print(f"\n {i}")
+            print(f"{self.slots[i]._printList()}")
 
-    
+if __name__ == "__main__":
+    linkedList = HTLinkedList(10)
+    for i in range(10):
+        linkedList._add(i)
+
+    linkedList._print()
+
+    linkedList._delete(3)
+
+    linkedList._print()
+
+    linkedList._find(4)
+
+    linkedList._print()
 
     
 
