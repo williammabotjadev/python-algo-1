@@ -34,3 +34,5 @@ def set_ops_with_dict():
     d_three = {key:d_two[key] for key in d_two.keys() - {'c', 'd'}}
     print(d_three)
 
+if __name__ == "__main__":
+    set_ops_with_dict()
