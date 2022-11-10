@@ -1,17 +1,8 @@
 # Reversing words in a string
  
 
-def reverser(s, p_one=0, p_two=None):
-    if len(s) < 2:
-        return s 
-
-    p_two = p_two or len(s) - 1
-    while p_one < p_two:
-        aux = s[p_one]
-        s[p_one] = s[p_two]
-        s[p_two] = aux
-        p_one += 1
-        p_two -= 1 
+def reverser(s):
+    return s[::-1]
 
 def reversing_words_logic(s):
     reverser(s)
@@ -22,10 +13,10 @@ def reversing_words_logic(s):
 
     while p < len(s):
         if s[p] == u"\u0200":
-            reverser(s, start, p - 1)
+            reverser(s)
             start = p + 1 
         p += 1 
-    reverser(s, start, p - 1)
+    reverser(s)
     
     return "".join(s)
 
@@ -55,9 +46,11 @@ def reverse_words_brute(s):
 
 def tests():
     test_string = "Able was I ere I saw Elba"
+    test_output = "Elba saw I ere I was Able"
     assert(reversing_words_logic(test_string) == test_string)
-    assert(reversing_words(test_string) == test_string)
-    assert(reverse_words_brute(test_string) == test_string)
+    assert(reversing_words(test_string).casefold() == test_output.casefold())
+    assert(reverse_words_brute(test_string).casefold() == test_output.casefold())
+
     print("Test Passed!")
 
 
