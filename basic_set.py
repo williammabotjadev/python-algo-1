@@ -15,3 +15,7 @@ print(people.union(more_people))
 print(people.difference(vampires))
 
 print(people)
+
+people.clear()
+
+print(people)
