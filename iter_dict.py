@@ -20,4 +20,9 @@ def gen_dict_vals(dict_input):
     for i in sorted(dict_input.keys()):
         yield i, dict_input[i]
 
-print(gen_dict_vals(foods))
+res = gen_dict_vals(foods)
+print(next(res))
+print(next(res))
+print(next(res))
+print(next(res))
+print(next(res))
