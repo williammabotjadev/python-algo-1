@@ -18,8 +18,7 @@ def read_data(file):
             fh.close()
     return lines
 
-def write_data(file):
-    lines = []
+def write_data(lines, file):
     fh = None 
     try:
         fh = open(file, "w")
