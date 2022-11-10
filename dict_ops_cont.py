@@ -13,3 +13,7 @@ print(litchfield.values())
 print(litchfield.keys())
 
 print(litchfield.items())
+
+litchfield.clear()
+
+print(litchfield)
