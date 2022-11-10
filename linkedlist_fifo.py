@@ -67,8 +67,23 @@ class LinkedListFIFO(object):
 
 if __name__ == "__main__":
     linkedList = LinkedListFIFO()
-    
-            
+    for i in range(10):
+        linkedList.add_node(i)
+
+    linkedList._printList()
+
+    linkedList.delete_node(2)
+
+    linkedList._printList()
+
+    linkedList._add(15)
+
+    linkedList._printList()
+
+    for i in range(linkedList.length - 1, -1, -1):
+        linkedList.delete_node(i)
+
+    linkedList._printList()            
 
     
 
