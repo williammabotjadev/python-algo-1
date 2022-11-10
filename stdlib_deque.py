@@ -9,3 +9,11 @@ print(q)
 q.append("giles")
 
 print(q)
+
+print(q.popleft())
+
+print(q.pop())
+
+q.appendleft("angel")
+
+print(q)
