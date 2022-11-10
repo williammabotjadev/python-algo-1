@@ -27,3 +27,5 @@ litchfield = dict([
     ("Age", 54),
     ("Hobbies", "Cooking")
 ])
+
+print(litchfield)
