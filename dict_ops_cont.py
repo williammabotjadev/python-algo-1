@@ -7,3 +7,9 @@ litchfield = dict(
 )
 
 print(litchfield.get("hobby"))
+
+print(litchfield.values())
+
+print(litchfield.keys())
+
+print(litchfield.items())
