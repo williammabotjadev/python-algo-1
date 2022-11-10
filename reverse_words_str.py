@@ -27,5 +27,10 @@ def reversing_words_logic(s):
     
     return "".join(s)
 
+def reversing_words(s):
+    words = s.split()
+    rev_set = " ".join(reversed(words))
+    return rev_set 
+
 if __name__ == "__main__":
     pass 
