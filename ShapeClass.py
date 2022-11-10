@@ -2,7 +2,7 @@
 
 import math 
 
-class Shape(Object):
+class Point():
     def __init__(self, x = 0, y = 0) -> None:
         self.x = x 
         self.y = y 
@@ -19,7 +19,7 @@ class Shape(Object):
     def __str__(self):
         return f"({self.x}, {self.y})"
 
-class Circle(Shape):
+class Circle(Point):
     def __init__(self, radius, x = 0, y = 0):
         super().__init__(x, y)
         self.radius = radius 
@@ -41,3 +41,19 @@ class Circle(Shape):
 
     def __str__(self):
         return repr(self)
+
+if __name__ == "__main__":
+    shape = Point(90, 0)
+
+    print(repr(shape))
+
+    print(shape.distance_from_origin())
+
+    circle = Circle(5, 12, 20)
+
+    print(circle.circumference())
+
+    print(circle.edge_distance_from_origin())
+
+    
+
