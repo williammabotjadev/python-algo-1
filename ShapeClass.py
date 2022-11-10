@@ -23,4 +23,21 @@ class Circle(Shape):
     def __init__(self, radius, x = 0, y = 0):
         super().__init__(x, y)
         self.radius = radius 
-        
+
+    def edge_distance_from_origin(self):
+        return (self.distance_from_origin() - self.radius)
+
+    def area(self):
+        return math.pi * (self.radius ** 2)
+
+    def circumference(self):
+        return 2 * math.pi * self.radius 
+
+    def __eq__(self, other):
+        return self.radius == other.radius and super.__eq__(other)
+
+    def __repr__(self):
+        return f"Circle: ({self.radius}, {self.x})"
+
+    def __str__(self):
+        return repr(self)
