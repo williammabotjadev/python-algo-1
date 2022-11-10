@@ -26,6 +26,15 @@ class LinkedListFIFO(object):
         self.tail = None
         print("The List is empty")
 
+    def _add(self, value):
+        self.length += 1 
+        node = Node(value)
+        if self.tail:
+            self.tail.pointer = node 
+        self.tail = node 
+
+    
+
     
 
     
