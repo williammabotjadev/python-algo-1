@@ -33,11 +33,10 @@ class Stack(object):
             print("Stack is empty")
 
     def __repr__(self):
-        for i in self.items:
-            print(i)
+        return f"Items: {self.items}"
 
     def __str__(self):
-        return repr(self)
+        return f"Items: {self.items}"
     
 if __name__ == "__main__":
     stack = Stack()
