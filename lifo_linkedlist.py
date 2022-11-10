@@ -59,3 +59,26 @@ class LinkedListLIFO(object):
             self._delete(node, prev)
         else:
             print(f"Node with value {value} not found")
+
+if __name__ == "__main__":
+    linkedList = LinkedListLIFO()
+    for i in range(10):
+        linkedList._add(i)
+
+    linkedList._printList()
+
+    linkedList.delete_node(2)
+
+    linkedList._printList()
+
+    linkedList.delete_node_by_value(5)
+
+    linkedList._printList()
+
+    linkedList._add(15)
+
+    for i in range(linkedList - 1, -1, -1):
+        linkedList.delete_node(i)
+
+    linkedList._printList()
+    
