@@ -14,4 +14,12 @@ class LinkedListFIFO(object):
             print(node.value)
             node = node.pointer 
 
+    def add_first(self, value):
+        self.length = 1 
+        node = Node(value)
+        self.head = node 
+        self.tail = node 
+
+    
+
     
