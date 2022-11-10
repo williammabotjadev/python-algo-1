@@ -13,3 +13,13 @@ def del_unique_word(s: str):
             s = s.replace(k, "")
     return s 
 
+def test():
+    test_case = "google"
+    result = del_unique_word(test_case)
+    expected = "le"
+    assert(result == expected)
+    print("Test Passed!")
+
+if __name__ == "__main__":
+    test()
+
