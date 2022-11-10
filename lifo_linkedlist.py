@@ -4,7 +4,7 @@ from linked_list import Node
 
 class LinkedListLIFO(object):
     def __init__(self):
-        self.head = Node 
+        self.head = None
         self.length = 0
 
     def _printList(self):
@@ -21,8 +21,8 @@ class LinkedListLIFO(object):
             prev.pointer = node.pointer 
 
     def _add(self, value):
-        self.lenghth += 1 
-        self.head = Node(self.head, value)
+        self.length += 1 
+        self.head = Node(value, self.head)
 
     def _find(self, index):
         prev = None 
@@ -56,7 +56,7 @@ class LinkedListLIFO(object):
     def delete_node_by_value(self, value):
         node, prev, found = self._find_by_value(value)
         if found:
-            self._delete(node, prev)
+            self._delete(prev, node)
         else:
             print(f"Node with value {value} not found")
 
@@ -77,7 +77,7 @@ if __name__ == "__main__":
 
     linkedList._add(15)
 
-    for i in range(linkedList - 1, -1, -1):
+    for i in range(linkedList.length - 1, -1, -1):
         linkedList.delete_node(i)
 
     linkedList._printList()
