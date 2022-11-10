@@ -25,5 +25,15 @@ def ordereddict_example():
     for k in d_two:
         print(k, d_two[k])
 
+def inc_ordereddict():
+    tasks = OrderedDict()
+
+    tasks[8294] = "User Email design"
+    tasks[2343] = "Webpage Testing"
+    tasks[2352] = "CRUD API Testing"
+
+    print(tasks)
+
 if __name__ == "__main__":
     ordereddict_example()
+    inc_ordereddict()
