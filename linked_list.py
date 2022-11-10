@@ -20,5 +20,11 @@ class Node(object):
 if __name__ == "__main__":
     L = Node("a", Node("b", Node("c", Node("d"))))
     assert(L.pointer.pointer.value == "c")
+    print(L.get_data())
+    print(L.get_next().get_data())
+    L.set_data("aa")
+    L.set_next(Node("e"))
+    print(L.get_data())
+    print(L.get_next().get_data())
+    print("Test Passed!")
 
-    
