@@ -9,3 +9,8 @@ class Shape(Object):
 
     def distance_from_origin(self):
         return math.hypot(self.x, self.y)
+
+    def __eq__(self, other):
+        return self.x == other.x and self.y == other.y 
+
+    
