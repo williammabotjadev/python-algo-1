@@ -8,4 +8,10 @@ class LinkedListFIFO(object):
         self.length = 0 
         self.tail = None 
 
+    def _printList(self):
+        node = self.head 
+        while node:
+            print(node.value)
+            node = node.pointer 
+
     
