@@ -20,6 +20,12 @@ class LinkedListFIFO(object):
         self.head = node 
         self.tail = node 
 
+    def deleted_first(self):
+        self.length = 0 
+        self.head = None 
+        self.tail = None
+        print("The List is empty")
+
     
 
     
