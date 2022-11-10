@@ -13,6 +13,10 @@ def stack_str_rev(s):
         rev_str += stack.pop()
 
     return rev_str
-    
+
+if __name__ == "__main__":
+    test_case = "The Quick Brown fox jumps over the Lazy dog"
+    print(test_case)
+    print(stack_str_rev(test_case))
 
 
