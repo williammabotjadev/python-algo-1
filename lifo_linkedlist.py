@@ -45,3 +45,17 @@ class LinkedListLIFO(object):
                 prev = node 
                 node = node.pointer 
         return node, prev, found 
+
+    def delete_node(self, index):
+        node, prev, i = self._find(index)
+        if index == 1:
+            self._delete(prev, node)
+        else:
+            print(f"Node with index {index} was not found.")
+
+    def delete_node_by_value(self, value):
+        node, prev, found = self._find_by_value(value)
+        if found:
+            self._delete(node, prev)
+        else:
+            print(f"Node with value {value} not found")
