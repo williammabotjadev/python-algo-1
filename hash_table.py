@@ -43,6 +43,11 @@ if __name__ == "__main__":
 
     linkedList._print()
 
+    for i in range(linkedList.size):
+        linkedList._delete(i)
+
+    linkedList._print()
+
     
 
     
