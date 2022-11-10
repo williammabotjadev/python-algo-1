@@ -33,6 +33,11 @@ class LinkedListFIFO(object):
             self.tail.pointer = node 
         self.tail = node 
 
+    def add_node(self, value):
+        if not self.head:
+            self.add_first(value)
+        else:
+            self._add(value)
     
 
     
