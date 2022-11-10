@@ -38,6 +38,17 @@ class LinkedListFIFO(object):
             self.add_first(value)
         else:
             self._add(value)
+
+    def _find(self, index):
+        prev = None 
+        node = self.head 
+        i = 0 
+        while node and i < index:
+            prev = node 
+            node = node.pointer
+            i += 1 
+        return node, prev, i 
+
     
 
     
