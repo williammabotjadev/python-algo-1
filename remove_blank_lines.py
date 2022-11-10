@@ -18,3 +18,16 @@ def read_data(file):
             fh.close()
     return lines
 
+def write_data(file):
+    lines = []
+    fh = None 
+    try:
+        fh = open(file, "w")
+        for line in lines:
+            fh.write(line)
+    except EnvironmentError as err:
+        print(err)
+    finally:
+        if fh is not None:
+            fh.close()
+
