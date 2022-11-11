@@ -30,7 +30,14 @@ class StackMin(Stack):
                 self.minimum = self.peekMinimum()
             return item.value
         else:
-            print("Stack is Empty")       
+            print("Stack is Empty")     
+
+    def __repr__(self):
+        aux = []
+
+        for i in self.items:
+            aux.append(i)
+        return f"Items: {self.items}"  
 
     
 
