@@ -14,4 +14,10 @@ class SetOfStacks(Stack):
             self.items = []
         self.items.append(value)
 
+    def pop(self):
+        item = self.items.pop()
+        if self.isEmpty() and self.setofstacks:
+            self.items = self.setofstacks.pop()
+        return item 
+
     
