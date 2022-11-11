@@ -20,6 +20,9 @@ class StackMin(Stack):
     def peek(self):
         return self.items[-1].value 
 
+    def peekMinimum(self):
+        return self.items[-1].minimum 
+
     
 
     
