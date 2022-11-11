@@ -6,3 +6,13 @@ class Node(object):
         self.animalKind = animalKind 
         self.pointer = pointer 
         self.timestamp = 0 
+
+class AnimalShelter(object):
+    def __init__(self):
+        self.headCat = None 
+        self.headDog = None 
+        self.tailCat = None 
+        self.tailDog = None 
+        self.animalNumber = 0 
+
+    
