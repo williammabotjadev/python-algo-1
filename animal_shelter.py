@@ -48,3 +48,16 @@ class AnimalShelter(object):
             return (newAnimal.animalName)
         else:
             print("No Cats in this Shelter")
+
+    def dequeue_any(self):
+        if self.headCat and not self.headDog:
+            self.dequeue_cat()
+        elif self.headDog and not self.headCat:
+            self.dequeue_dog()
+        elif self.headCat and self.headDog:
+            if self.headDog.timestamp < self.headCat.timestamp:
+                self.dequeue_dog()
+            else:
+                self.dequeue_cat()
+        else:
+            print("No Animals in this Shelter")
