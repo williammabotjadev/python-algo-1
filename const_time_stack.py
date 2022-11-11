@@ -23,6 +23,15 @@ class StackMin(Stack):
     def peekMinimum(self):
         return self.items[-1].minimum 
 
+    def pop(self):
+        item = self.items.pop()
+        if item:
+            if item.value == self.minimum:
+                self.minimum = self.peekMinimum()
+            return item.value
+        else:
+            print("Stack is Empty")       
+
     
 
     
