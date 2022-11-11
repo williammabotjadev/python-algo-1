@@ -17,4 +17,9 @@ class StackMin(Stack):
             self.minimum = value 
         self.items.append(NodeWithMin(value, self.minimum))
 
+    def peek(self):
+        return self.items[-1].value 
+
+    
+
     
