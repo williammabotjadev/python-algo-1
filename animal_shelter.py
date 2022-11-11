@@ -33,4 +33,18 @@ class AnimalShelter(object):
                 self.tailDog.pointer = newAnimal
             self.tailDog = newAnimal
     
-        
+    def dequeue_dog(self):
+        if self.headDog:
+            newAnimal = self.headDog 
+            self.headDog = self.headDog.pointer 
+            return (newAnimal.animalName)
+        else:
+            print("No Dogs in this Shelter")
+
+    def dequeue_cat(self):
+        if self.headCat:
+            newAnimal = self.headCat
+            self.headCat = self.headCat.pointer 
+            return (newAnimal.animalName)
+        else:
+            print("No Cats in this Shelter")
