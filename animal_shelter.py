@@ -15,4 +15,22 @@ class AnimalShelter(object):
         self.tailDog = None 
         self.animalNumber = 0 
 
+    def enqueue(self, animalName, animalKind):
+        self.animalNumber += 1 
+        newAnimal = Node(animalName, animalKind)
+
+        if animalKind.casefold() == "Cat".casefold():
+            if not self.headCat:
+                self.headCat = newAnimal 
+            if self.tailCat:
+                self.tailCat.pointer = newAnimal 
+            self.tailCat = newAnimal 
+
+        if animalKind.casefold() == "Dog".casefold():
+            if not self.headDog:
+                self.headDog = newAnimal
+            if self.tailDog:
+                self.tailDog.pointer = newAnimal
+            self.tailDog = newAnimal
     
+        
