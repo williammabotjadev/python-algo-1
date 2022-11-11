@@ -8,4 +8,10 @@ class SetOfStacks(Stack):
         self.items = []
         self.capacity = capacity 
 
+    def push(self, value):
+        if self.size() >= self.capacity:
+            self.setofstacks.append(self.items)
+            self.items = []
+        self.items.append(value)
+
     
