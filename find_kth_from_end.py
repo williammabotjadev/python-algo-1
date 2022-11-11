@@ -25,8 +25,8 @@ if __name__ == "__main__":
 
     linkedList._printList()
 
-    k = 3 
+    k = 4
 
     k_res = linkedList.find_kth_to_last(k)
-
-    print(f"The {k}th element to the last of the LL of size {linkedList.length} is {k_res}")
+    suffix = "rd" if (k == 3)  else "th"
+    print(f"The {k}{suffix} element to the last of the LL of size {linkedList.length} is {k_res}")
