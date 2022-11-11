@@ -20,7 +20,14 @@ class SetOfStacks(Stack):
             self.items = self.setofstacks.pop()
         return item 
 
-    def size(self):
+    def sizeStack(self):
         return len(self.setofstacks) * self.capacity + self.size()
 
+    def __repr__(self):
+        aux = []
+
+        for i in self.setofstacks:
+            aux.extend(i)
+        aux.extend(self.items)
+        return f"Items: {aux}"
     
