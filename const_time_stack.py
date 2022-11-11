@@ -3,7 +3,14 @@
 from stack import Stack 
 
 class NodeWithMin(object):
-    def __init__(self, value=None, pointer=None):
+    def __init__(self, value=None, minimum=None):
         self.value = value 
-        self.pointer = value 
+        self.minimum = minimum
+
+class StackMin(object):
+    def __init__(self):
+        self.items = []
+        self.minimum = None
+
+    
 
