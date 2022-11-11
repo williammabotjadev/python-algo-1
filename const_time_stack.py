@@ -36,9 +36,22 @@ class StackMin(Stack):
         aux = []
 
         for i in self.items:
-            aux.append(i)
-        return f"Items: {self.items}"  
+            aux.append(i.value)
+        return f"Items: {aux}"  
 
-    
+if __name__ == "__main__":
+    stack = StackMin()
+
+    for i in range(10, 0, -1):
+        stack.push(i)
+
+    for i in range(5):
+        stack.push(i)
+
+    print(stack.peek())
+    print(stack.peekMinimum())
+    print(stack.isEmpty())
+    print(stack.pop())
+    print(stack.__repr__())
 
     
