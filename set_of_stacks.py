@@ -30,4 +30,17 @@ class SetOfStacks(Stack):
             aux.extend(i)
         aux.extend(self.items)
         return f"Items: {aux}"
+
+if __name__ == "__main__":
+    stack = SetOfStacks()
+    for i in range(10):
+        stack.push(i)
+
+    print(stack.size())
+
+    print(stack.sizeStack())
+
+    print(stack.pop())
+
+    stack.__repr__()
     
